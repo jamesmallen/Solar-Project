@@ -1,6 +1,5 @@
 <?php
 require_once("keys.php");
-//$url = "https://api.enphaseenergy.com/api/v2/systems/67/summary?key=cbedba5038f8398dd6175b5c47e5004d&user_id=4d7a45774e6a41320a";//4d7a41774e5441340a";
 $url = "https://api.enphaseenergy.com/api/v2/systems/341484/summary?key=" .$key. "&user_id=" .$userID ;
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
