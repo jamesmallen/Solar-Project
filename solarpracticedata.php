@@ -36,7 +36,7 @@ echo '<img height="40px" width="25px" src="http://upload.wikimedia.org/wikipedia
 $decimalBulbs = ($numBulbs - floor($numBulbs))*40;
 echo '
 <div style="height: ' . $decimalBulbs . 'px; overflow: hidden; display: inline-block">
-	<img height="40px" width="25px" src="http://upload.wikimedia.org/wikipedia/commons/f/f6/01_Spiral_CFL_Bulb_2010-03-08_(transparent_back).png">
+	<img height="40px" width="25px" src="C:\Users\Madi\Desktop\Post AP CS\Solar-Project\lightbulb.png">
 </div>
 ';
 echo '</div>';
