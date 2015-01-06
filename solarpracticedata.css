@@ -1,0 +1,21 @@
+.background {
+	height: 100%;
+	background-image: url("http://www.hb.edu/uploaded/images2/page_bg.jpg");
+}
+
+body {
+	margin: 0px;
+}
+.logo{
+	text-align: center;
+}
+.lightBulbs {
+	text-align: center;
+	background: whitesmoke;
+}
+
+.info {
+	text-align: center;
+	background: whitesmoke;
+	margin-top: 10px;
+}
