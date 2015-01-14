@@ -26,7 +26,7 @@ $numBulbs = ($energy/$lightBultkWh);
 <body>
 <div class="background">
 <div class="logo">
-<img src="http://www.hb.edu/uploaded/images2/logolg.png">
+<img src="hblogo.png">
 </div>
 <?php
 echo '<div class="lightBulbs">';
