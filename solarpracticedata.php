@@ -18,6 +18,27 @@ $numBulbs = ($energy/$lightBultkWh);
 //echo $numBulbs;
 ?>
 -->
+
+<?php
+$url_pre = "https://api.enphaseenergy.com/api/v2/systems/341484/summary_data=2014-01-13?key=" .$key. "&user_id=" .$userID ;
+$ch_pre = curl_init($url_pre);
+curl_setopt($ch_pre, CURLOPT_RETURNTRANSFER, true);
+$curl_scraped_page_pre = curl_exec($ch_pre);
+curl_close($ch_pre);
+?>
+<!--
+<?php
+echo $curl_scraped_page_pre;
+$energy_pre = (json_decode($curl_scraped_page_pre)-> {"energy_today"})/1000.0;
+//echo $energy_pre;
+$lightBultkWh_pre = ((14/1000.0)*24); //the energy (in kWh) a 60 watt light bulb uses per day
+echo $lightBultkWh_pre;
+echo $energy_pre;
+$numBulbs_pre = ($energy_pre/$lightBultkWh_pre);
+//echo $numBulbs_pre;
+?>
+-->
+
 <html>
 <head> 
 <link rel="stylesheet" href="solarpracticedata.css"> 
@@ -41,10 +62,10 @@ echo '
 ';
 echo '</div>';
 echo '<div class="info">
-	Today we\'ve produced ' .$lightBultkWh . ' kWh. Which is equivalent to ' .round($numBulbs,2). ' light bulbs!
+	Today we\'ve produced ' .$lightBultkWh . ' kWh. Which is equivalent to ' .round($numBulbs,2). ' light bulbs! Yesterday we made '.$lightBultkWh_pre . ' kWh. Which is equivalent to '.$numBulbs_pre . ' light bulbs!
 	</div>';
 ?>
-<a href="http://enphase.com" title="Enphase API logo small" ><img src="https://s3.amazonaws.com/enterprise-multitenant.3scale.net.3scale.net/enphase-energy/2014/05/06/ENPH_logo_scr_RGB_API_sm-4155f33125cda43a.png?AWSAccessKeyId=AKIAIRYLTWBQ37ZNGBZA&amp;Expires=1417629196&amp;Signature=YGMuGG%2FgsWR27SRBOk4g6u27bqw%3D"></a>
+<a href="http://enphase.com" title="Enphase API logo small" ><img src="enphaselogo.png"></a>
 </div>
 </body>
 </html>
