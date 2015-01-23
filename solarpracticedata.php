@@ -20,10 +20,11 @@ $numBulbs = ($energy/$lightBultkWh);
 -->
 
 <?php
-$url_pre = "https://api.enphaseenergy.com/api/v2/systems/341484/summary_data=2014-01-13?key=" .$key. "&user_id=" .$userID ;
+$url_pre = "https://api.enphaseenergy.com/api/v2/systems/341484/summary?summary_date=2015-01-20&key=" .$key. "&user_id=" .$userID ;
 $ch_pre = curl_init($url_pre);
 curl_setopt($ch_pre, CURLOPT_RETURNTRANSFER, true);
 $curl_scraped_page_pre = curl_exec($ch_pre);
+echo $curl_scraped_page_pre;
 curl_close($ch_pre);
 ?>
 <!--
@@ -49,6 +50,9 @@ $numBulbs_pre = ($energy_pre/$lightBultkWh_pre);
 <div class="logo">
 <img src="hblogo.png">
 </div>
+<div class='solarpic'>
+<img width=40% src="HBsolar.jpg">
+</div>
 <?php
 echo '<div class="lightBulbs">';
 for ($i= 0; $i< floor($numBulbs); $i++){
@@ -62,8 +66,12 @@ echo '
 ';
 echo '</div>';
 echo '<div class="info">
-	Today we\'ve produced ' .$lightBultkWh . ' kWh. Which is equivalent to ' .round($numBulbs,2). ' light bulbs! Yesterday we made '.$lightBultkWh_pre . ' kWh. Which is equivalent to '.$numBulbs_pre . ' light bulbs!
+	Today we\'ve produced ' .$energy . ' kWh. Which is equivalent to ' .round($numBulbs,2). ' light bulbs! Yesterday we made '.$energy_pre . ' kWh. Which is equivalent to '.round($numBulbs_pre,2) . ' light bulbs!
 	</div>';
+	
+	
+	
+	
 ?>
 <a href="http://enphase.com" title="Enphase API logo small" ><img src="enphaselogo.png"></a>
 </div>
