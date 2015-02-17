@@ -9,6 +9,15 @@ body {
 .logo{
 	text-align: center;
 }
+
+.graph_lightBulbs{
+	background: whitesmoke;
+	height: 32px;
+	margin-left: 20%;
+	border-bottom: 1px solid grey;
+}
+
+
 .lightBulbs {
 	text-align: center;
 	background: whitesmoke;
@@ -19,7 +28,25 @@ body {
 	background: whitesmoke;
 	margin-top: 10px;
 }
-.solarpic{
-	margin-left: 10px;
+
+.graph_container {
+	height: 80%;
+
+}
+.solarpic {
+	margin-left: 2.5%;
 	margin-bottom: 10px;
+	width: 45%;
+	height: 100%;
+	float: left;
+}
+
+.graph {
+	background: whitesmoke;
+	height: 100%;
+	width: 45%;
+	margin-left: 52.5%;
+	overflow: scroll;
+
+
 }
