@@ -63,7 +63,7 @@ for($i=0; $i< count($energy_array); $i++)
 	}
 	$decimalBulbs = ($numBulbs - floor($numBulbs))*40;
 	echo '
-	<div style="height: ' . $decimalBulbs . 'px; overflow: hidden; display: inline-block">
+	<div style="width: ' . $decimalBulbs . 'px; overflow: hidden; display: inline-block">
 		<img height="32px" width="20px" src="lightbulb.png">
 	</div>';	
 	echo '</div>';
