@@ -32,7 +32,21 @@ for($i = 0; $i<8; $i++){
 	
 }
 ?>
+<?php
 
+$url_pre_usage = "http://wattlog-hathawaybrown.rhcloud.com/usage" ;
+	$ch_pre_usage = curl_init($url_pre_usage);
+	curl_setopt($ch_pre_usage, CURLOPT_RETURNTRANSFER, true);
+	$curl_scraped_page_pre_usage = curl_exec($ch_pre_usage);
+	//echo $curl_scraped_page_pre;
+	curl_close($ch_pre_usage);
+	
+	//echo $curl_scraped_page_pre;
+	$energy_pre_usage = (json_decode($curl_scraped_page_pre_usage)-> {"watt_hours"});
+	//echo $energy_pre_usage;
+
+
+?>
 <html>
 <head> 
 <link rel="stylesheet" href="solarpracticedata.css"> 
@@ -49,7 +63,7 @@ for($i = 0; $i<8; $i++){
 </div>
 <div class = 'graph'>
 <?php
-
+echo 'Today we have used '.$energy_pre_usage . ' watts.'; 
 for($i=0; $i< count($energy_array); $i++)
 {
 	$date_info = "Today";
@@ -75,7 +89,7 @@ for($i=0; $i< count($energy_array); $i++)
 </div>
 </div>
 <?php
-echo '<div class="lightBulbs">';
+/*echo '<div class="lightBulbs">';
 for ($i= 0; $i< floor($numBulbs); $i++){
 echo '<img height="40px" width="25px" src="lightbulb.png">';
 }
@@ -83,9 +97,9 @@ $decimalBulbs = ($numBulbs - floor($numBulbs))*40;
 echo '
 <div style="height: ' . $decimalBulbs . 'px; overflow: hidden; display: inline-block">
 	<img height="40px" width="25px" src="lightbulb.png">
-</div>
+</div> 
 ';
-echo '</div>';
+echo '</div>'; */
 $lightBultkWh_pre = ((14/1000.0)*24);
 for($i=0; $i< count($energy_array); $i++){
 $date_info = "Today";
