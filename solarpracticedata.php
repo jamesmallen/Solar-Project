@@ -49,7 +49,7 @@ $url_pre_usage = "http://wattlog-hathawaybrown.rhcloud.com/usage" ;
 ?>
 <html>
 <head> 
-<link rel="stylesheet" href="solarpracticedata.css"> 
+<link rel="stylesheet" href="solarpracticedata.css">
 <title>Solar Energy Page</title>
 </head>
 <body>
@@ -59,7 +59,7 @@ $url_pre_usage = "http://wattlog-hathawaybrown.rhcloud.com/usage" ;
 </div>
 <div class= "graph_container">
 <div class='solarpic'>
-<img src="HBsolar.jpg" height= "100%" width= "100%">
+<img src="HBsolar.jpg" width= "100%">
 </div>
 <div class = 'graph'>
 <?php
@@ -75,9 +75,9 @@ for($i=0; $i< count($energy_array); $i++)
 	for ($j= 0; $j< floor($numBulbs); $j++){
 		echo '<img height="32px" width="20px" src="lightbulb.png">';
 	}
-	$decimalBulbs = ($numBulbs - floor($numBulbs))*40;
+	$decimalBulbs = ($numBulbs - floor($numBulbs))*20;
 	echo '
-	<div style="width: ' . $decimalBulbs . 'px; overflow: hidden; display: inline-block">
+	<div style="width: ' . $decimalBulbs . 'px; overflow: hidden; margin-left: -5px; display: inline-block">
 		<img height="32px" width="20px" src="lightbulb.png">
 	</div>';	
 	echo '</div>';
@@ -116,7 +116,7 @@ echo '<div class="info">
 	
 	
 ?>
-<a href="http://enphase.com" title="Enphase API logo small" ><img src="enphaselogo.png"></a>
+<a href="http://enphase.com" title="Enphase API logo small"><img src="enphaselogo.png" style="margin: 5px;"></a>
 </div>
 </body>
 </html>
