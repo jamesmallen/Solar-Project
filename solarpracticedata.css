@@ -16,11 +16,13 @@ body {
 	margin-left: 20%;
 	width: auto;
 	border-bottom: 1px solid grey;
+	/*
 	overflow-y: hidden;
 	overflow-x: scroll;
-	white-space: nowrap;
+	white-space: nowrap;*/
 	padding-right: 6px;
 	padding-left: 6px;
+	vertical-align: top;
 }
 
 
@@ -32,7 +34,7 @@ body {
 .info {
 	text-align: center;
 	background: rgba(245,245,245,.5);
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 	font-size: 16px;
 	padding: 3px;
 }
