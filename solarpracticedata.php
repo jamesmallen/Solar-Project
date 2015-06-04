@@ -177,7 +177,7 @@ else
 	$percent = ($energyUseToday/$energy_pre*1000)*100 . "%";
 }
 echo "This means that the solar panels have provided " . $percent . " of our electricity.<br>";
-if ($energyUseWeek < $energy_pre_week)
+if ($energyUseWeek < $energy_pre_week*1000)
 {
 	$percent = "more than enough";
 }
