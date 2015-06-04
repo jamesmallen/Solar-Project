@@ -1,0 +1,61 @@
+.background {
+}
+
+body {
+	margin: 0px;
+	font-family: Tahoma, Geneva, sans-serif;
+	background-image: url("http://www.hb.edu/uploaded/images2/page_bg.jpg");
+}
+.logo{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.graph_lightBulbs{
+	background: whitesmoke;
+	margin-left: 20%;
+	width: auto;
+	border-bottom: 1px solid grey;
+	/*
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;*/
+	padding-right: 6px;
+	padding-left: 6px;
+	vertical-align: top;
+}
+
+
+.lightBulbs {
+	text-align: center;
+	background: whitesmoke;
+}
+
+.info {
+	text-align: center;
+	background: rgba(245,245,245,.5);
+	/*margin-top: 5px;*/
+	font-size: 16px;
+	padding: 3px;
+}
+
+.graph_container {
+	height: auto;
+
+}
+.solarpic {
+	margin-left: 2.5%;
+	margin-bottom: 10px;
+	width: 47.5%;
+	display: inline-block;
+}
+
+.graph {
+	background: rgba(245,245,245,.5);
+	width: 45%;
+	margin-left: 1.75%;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	padding: 7px;
+}
