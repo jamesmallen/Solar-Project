@@ -1,9 +1,9 @@
 <?php
 
 if (isset($_ENV["OPENSHIFT_DATA_DIR"])) {
-	$data_dir = $_ENV["OPENSHIFT_DATA_DIR"]
+	$data_dir = $_ENV["OPENSHIFT_DATA_DIR"];
 } else {
-	$data_dir = '.'
+	$data_dir = '.';
 }
 
 require_once("$data_dir/keys.php");
