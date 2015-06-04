@@ -164,28 +164,28 @@ if ($numModules == 1)
 }
 //echo "Our solar panels at HB have been functioning since " . $wakeUp . "<br>";
 //echo "Since they have been here, they have produced a whopping total of " . $totalEnergy . "kWh!<br>";
-echo "Currently " . $numModules . " of 5 solar panels are up and running. At this moment " . $plural . " producing " . $currentPower . " watts.";
+echo "Currently " . $numModules . " of 5 solar panels are up and running. At this moment " . $plural . " producing " . $currentPower . " WH.";
 echo "<br>";
-echo "Today HB has consumed " . $energyUseToday . " watts of electricity whereas the solar panels have produced " . $energy_pre*1000 . " watts.<br>";
+echo "Today HB has consumed " . $energyUseToday . " WH of electricity whereas the solar panels have produced " . $energy_pre*1000 . " WH.<br>";
 $percent = "";
-if ($energyUseToday < $energy_pre)
+if ($energyUseToday < $energy_pre*1000)
 {
 	$percent = "more than enough";
 }
 else
 {
-	$percent = ($energyUseToday/$energy_pre)*100 . "%";
+	$percent = ($energyUseToday/$energy_pre*1000)*100 . "%";
 }
-echo "This means that the solar panels have provided " . $percent . " of our electricity<br>";
+echo "This means that the solar panels have provided " . $percent . " of our electricity.<br>";
 if ($energyUseWeek < $energy_pre_week)
 {
 	$percent = "more than enough";
 }
 else
 {
-	$percent = ($energyUseWeek/$energy_pre_week)*100 . "%";
+	$percent = ($energyUseWeek/$energy_pre_week*1000)*100 . "%";
 }
-echo "This week HB has consumed " . $energyUseWeek . " watts of electricity and the solar panels have produced " . $energy_pre_week*1000 . " watts.<br>";
+echo "This week HB has consumed " . $energyUseWeek . " WH of electricity and the solar panels have produced " . $energy_pre_week*1000 . " WH.<br>";
 echo "So they have produced " . $percent . " of our electricity!"
 ?>
 </div>
