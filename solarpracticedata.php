@@ -89,6 +89,7 @@ for($i = 0; $i<8; $i++){
 <head> 
 <link rel="stylesheet" href="solarpracticedata.css">
 <title>Solar Energy Page</title>
+<meta http-equiv="refresh" content="300" />
 </head>
 <body>
 <div class="background">
@@ -167,25 +168,25 @@ echo "Currently " . $numModules . " of 5 solar panels are up and running. At thi
 echo "<br>";
 echo "Today HB has consumed " . $energyUseToday . " watts of electricity whereas the solar panels have produced " . $energy_pre*1000 . " watts.<br>";
 $percent = "";
-if ($energyUseToday == 0)
+if ($energyUseToday < $energy_pre)
 {
 	$percent = "more than enough";
 }
 else
 {
-	$percent = ($energy_pre/$energyUseToday)*100 . "%";
+	$percent = ($energyUseToday/$energy_pre)*100 . "%";
 }
-echo "This means that the solar panels have provided " . $percent . " of our school's electricity<br>";
-if ($energyUseWeek == 0)
+echo "This means that the solar panels have provided " . $percent . " of our electricity<br>";
+if ($energyUseWeek < $energy_pre_week)
 {
 	$percent = "more than enough";
 }
 else
 {
-	$percent = ($energy_pre/$energyUseWeek)*100 . "%";
+	$percent = ($energyUseWeek/$energy_pre_week)*100 . "%";
 }
 echo "This week HB has consumed " . $energyUseWeek . " watts of electricity and the solar panels have produced " . $energy_pre_week*1000 . " watts.<br>";
-echo "So they have produced " . $percent . " of our school's electricity!"
+echo "So they have produced " . $percent . " of our electricity!"
 ?>
 </div>
 
