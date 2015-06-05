@@ -91,7 +91,7 @@ for($i = 0; $i<8; $i++){
 <title>Solar Energy Page</title>
 <meta http-equiv="refresh" content="300" />
 <script type="text/javascript">
-setTimeout(function() { location.reload(true); }, 2000);
+setTimeout(function() { location.reload(true); }, 300000);
 </script>
 </head>
 <body>
